@@ -1,16 +1,27 @@
 #ifndef BOOK
 #define BOOK
-using namespace std;
+#include <vector>
 #include <iostream>
+#include "article.h"
+#include "author.h"
+#include "chapter.h"
+using namespace std;
 class Book{
     private:
     string title;
-    string author;
-    string isbon;
+    Author author;
+    int publicationYear;
+    vector<Chapter> chapters;
     public:
-    Book(string title,string author,string isbon)
-    ~Book()
+    Book();
+    Book(string bookTitle, Author bookAuthor, int year, const vector<Chapter> &bookChapter);
+    void addChapter(Chapter newChapter);
+    void displayInfo();
     string getTitle();
-    string getAuthor();
-    string getIsbon();
-}
+    Author getAuthor();
+    int getPublicationYear();
+    vector<Chapter> &getChapters();
+ 
+ 
+};
+#endif

@@ -18,8 +18,8 @@ string getTitle();
 Author getAuthor();
 int getPublicationYear();
 string getJournal();
-
-
-
+ 
+ 
+ 
 };
 #endif

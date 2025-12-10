@@ -12,10 +12,6 @@ class Author{
     string toString();
     string getName();
     string getSurname();
-
+ 
 };
 #endif
-
-
-
-
